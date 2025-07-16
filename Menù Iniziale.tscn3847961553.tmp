@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://qh3iro7ruafi"]
+
+[ext_resource type="Texture2D" uid="uid://coxu5r6qqf062" path="res://Sprite/BackGround/Sfondo Start.png" id="1_s4kvq"]
+[ext_resource type="Texture2D" uid="uid://depjrr7ktq8uc" path="res://Sprite/Gioco 1.png" id="2_6i66r"]
+[ext_resource type="Script" uid="uid://b1stgf208e4we" path="res://giochi.gd" id="3_y41k7"]
+
+[node name="Start" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+ignore_rotation = false
+
+[node name="SfondoStart" type="Sprite2D" parent="."]
+texture_repeat = 1
+texture = ExtResource("1_s4kvq")
+centered = false
+
+[node name="Giochi" type="Sprite2D" parent="."]
+texture = ExtResource("2_6i66r")
+centered = false
+script = ExtResource("3_y41k7")
+
+[node name="Giochi 2" type="Sprite2D" parent="."]
+texture = ExtResource("2_6i66r")
+centered = false
