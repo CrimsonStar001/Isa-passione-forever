@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://bm74go4c0wh0m"]
+
+[ext_resource type="Script" uid="uid://d2eif4vs8t2yu" path="res://Minigame/scava_la_lettiera.gd" id="1_5mbul"]
+[ext_resource type="Texture2D" uid="uid://kgclx1tejmnv" path="res://Sprite/BackGround/Pavimento.png" id="1_wbk65"]
+[ext_resource type="PackedScene" uid="uid://bx0fiu4l72d4y" path="res://Oggetti/punteggio.tscn" id="2_llhq2"]
+[ext_resource type="PackedScene" uid="uid://dtf1lgca7gd83" path="res://Oggetti/orologio.tscn" id="4_q2v15"]
+[ext_resource type="Texture2D" uid="uid://gj1xwccicy1" path="res://Sprite/Isa Passione Pulizie/Scava la lettiera/Lettiera BackGround.png" id="5_brfcp"]
+[ext_resource type="Texture2D" uid="uid://cocv3ip7iuhjn" path="res://Sprite/Isa Passione Pulizie/Scava la lettiera/Lettiera_Foward.png" id="6_7cy2v"]
+[ext_resource type="Script" uid="uid://s1kheajunw3s" path="res://Minigame/maniglie.gd" id="7_20vek"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_up3yb"]
+size = Vector2(30, 144)
+
+[node name="Scava la Lettiera" type="Node2D"]
+script = ExtResource("1_5mbul")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+show_behind_parent = true
+texture = ExtResource("1_wbk65")
+centered = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Punteggio" parent="." instance=ExtResource("2_llhq2")]
+visible = true
+
+[node name="Orologio" parent="." instance=ExtResource("4_q2v15")]
+
+[node name="Lettiera" type="Node2D" parent="."]
+
+[node name="Lettiera_Background" type="Sprite2D" parent="Lettiera"]
+position = Vector2(322, 207)
+texture = ExtResource("5_brfcp")
+
+[node name="Lettiera_Foward" type="Sprite2D" parent="Lettiera/Lettiera_Background"]
+texture = ExtResource("6_7cy2v")
+
+[node name="Maniglie" type="Area2D" parent="Lettiera"]
+process_priority = 1
+process_physics_priority = 1
+collision_priority = 4.0
+priority = 3
+script = ExtResource("7_20vek")
+
+[node name="Maniglia_Collision2" type="CollisionShape2D" parent="Lettiera/Maniglie"]
+process_priority = 5
+process_physics_priority = 5
+position = Vector2(546, 220)
+shape = SubResource("RectangleShape2D_up3yb")
+
+[node name="Maglia_Pulsante" type="CollisionShape2D" parent="Lettiera/Maniglie"]
+process_priority = 5
+process_physics_priority = 5
+position = Vector2(93, 219)
+shape = SubResource("RectangleShape2D_up3yb")
+
+[connection signal="area_entered" from="Lettiera/Maniglie" to="Lettiera/Maniglie" method="_on_area_entered"]
+[connection signal="mouse_entered" from="Lettiera/Maniglie" to="Lettiera/Maniglie" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Lettiera/Maniglie" to="Lettiera/Maniglie" method="_on_mouse_exited"]

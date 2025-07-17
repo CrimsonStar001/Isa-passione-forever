@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtf1lgca7gd83"]
+
+[ext_resource type="Script" uid="uid://costllw6dea53" path="res://orologio.gd" id="1_cdhcb"]
+[ext_resource type="Texture2D" uid="uid://puo62b6dhqu4" path="res://Sprite/Oggetti/Sfondo Orologio.png" id="2_wwvbn"]
+[ext_resource type="Texture2D" uid="uid://jeylokbjbl41" path="res://Sprite/Oggetti/Lancetta Orologio.png" id="3_t2lh0"]
+
+[node name="Orologio" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cdhcb")
+
+[node name="Orologio" type="Sprite2D" parent="."]
+position = Vector2(600, 40)
+texture = ExtResource("2_wwvbn")
+
+[node name="Lancetta" type="Sprite2D" parent="."]
+position = Vector2(600, 40)
+texture = ExtResource("3_t2lh0")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

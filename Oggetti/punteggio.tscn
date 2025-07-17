@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bx0fiu4l72d4y"]
+
+[ext_resource type="Script" uid="uid://dsamb8rup1w5p" path="res://punteggio.gd" id="1_17j2g"]
+
+[sub_resource type="FontVariation" id="FontVariation_17j2g"]
+
+[node name="Punteggio" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_17j2g")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 12.0
+offset_top = 14.0
+offset_right = 182.0
+offset_bottom = 41.0
+theme_override_fonts/font = SubResource("FontVariation_17j2g")
+theme_override_font_sizes/font_size = 29
+text = "Prova"

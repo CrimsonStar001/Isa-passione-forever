@@ -54,7 +54,7 @@ func flip_sinistro():
 	if current_index <= 0:
 		GlobaleAssoluta.Gamecurrent_index = current_index
 
-func _on_animation_player_animation_finished(anim_name):
+func _on_animation_player_animation_finished():
 		$"../Gioco attuale".position = Vector2(320,180)
 		$"../Gioco attuale".scale.x = 1
 		$"../Gioco attuale".visible = true 
