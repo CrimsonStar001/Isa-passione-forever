@@ -1,18 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://uaqi2qm15fhq"]
+[gd_scene load_steps=7 format=3 uid="uid://uaqi2qm15fhq"]
 
 [ext_resource type="Script" uid="uid://f1yvn07t0g1y" path="res://Oggetti/Oggetti Minori/Cacche/cacche.gd" id="1_aer1c"]
+[ext_resource type="Script" uid="uid://cf0yvoporl1gi" path="res://Risorse/Cacche.gd" id="2_nk534"]
 [ext_resource type="Texture2D" uid="uid://depjrr7ktq8uc" path="res://Sprite/Gioco 1.png" id="2_p2isq"]
+[ext_resource type="Resource" uid="uid://df0e52qw1yprk" path="res://Risorse/Minigiochi/Isa_Passione_Pulizia/Cacca_1.tres" id="3_sapay"]
+[ext_resource type="Resource" uid="uid://ekip5sevkk6m" path="res://Risorse/Minigiochi/Isa_Passione_Pulizia/Cacca_D'oro.tres" id="4_nk534"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yqyo4"]
 size = Vector2(1, 1)
 
 [node name="Cacche" type="Area2D"]
 script = ExtResource("1_aer1c")
+Tipologia = Array[ExtResource("2_nk534")]([ExtResource("3_sapay"), ExtResource("4_nk534")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_yqyo4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+light_mask = 3
 visibility_layer = 2
 z_index = 2
 position = Vector2(-1.43051e-06, 4.76837e-07)

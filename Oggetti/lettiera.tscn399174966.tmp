@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://rypbdkgmhtmr"]
+
+[ext_resource type="Script" uid="uid://c8dpxpbuvovha" path="res://Minigame/lettiera.gd" id="1_pj3rk"]
+[ext_resource type="Texture2D" uid="uid://gj1xwccicy1" path="res://Sprite/Isa Passione Pulizie/Scava la lettiera/Lettiera BackGround.png" id="2_s44pj"]
+[ext_resource type="Texture2D" uid="uid://cocv3ip7iuhjn" path="res://Sprite/Isa Passione Pulizie/Scava la lettiera/Lettiera_Foward.png" id="3_17vka"]
+[ext_resource type="Script" uid="uid://s1kheajunw3s" path="res://Minigame/maniglie.gd" id="4_lh580"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kk5s1"]
+size = Vector2(32, 157)
+
+[node name="Lettiera" type="Node2D"]
+script = ExtResource("1_pj3rk")
+
+[node name="Lettiera_Background" type="Sprite2D" parent="."]
+position = Vector2(250, 125)
+texture = ExtResource("2_s44pj")
+
+[node name="Lettiera_Foward" type="Sprite2D" parent="Lettiera_Background"]
+z_index = 1
+z_as_relative = false
+position = Vector2(0.25, 0.500005)
+scale = Vector2(1.01159, 0.896875)
+texture = ExtResource("3_17vka")
+
+[node name="Maniglie" type="Area2D" parent="."]
+process_priority = 1
+process_physics_priority = 1
+collision_priority = 4.0
+priority = 3
+script = ExtResource("4_lh580")
+
+[node name="Maniglia_Collision2" type="CollisionShape2D" parent="Maniglie"]
+process_priority = 5
+process_physics_priority = 5
+position = Vector2(516, 135)
+shape = SubResource("RectangleShape2D_kk5s1")
+
+[node name="Maglia_Pulsante" type="CollisionShape2D" parent="Maniglie"]
+process_priority = 5
+process_physics_priority = 5
+position = Vector2(-16, 134.5)
+shape = SubResource("RectangleShape2D_kk5s1")
+
+[connection signal="area_entered" from="Maniglie" to="Maniglie" method="_on_area_entered"]
+[connection signal="mouse_entered" from="Maniglie" to="Maniglie" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Maniglie" to="Maniglie" method="_on_mouse_exited"]

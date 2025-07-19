@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Cacche_Class" load_steps=3 format=3 uid="uid://ekip5sevkk6m"]
+
+[ext_resource type="Script" uid="uid://cf0yvoporl1gi" path="res://Risorse/Cacche.gd" id="1_2fv5d"]
+[ext_resource type="Texture2D" uid="uid://dnpmw176647ve" path="res://Sprite/Isa Passione Pulizie/Scava la lettiera/Cacca_D'oro.png" id="2_ctani"]
+
+[resource]
+script = ExtResource("1_2fv5d")
+texture = ExtResource("2_ctani")
+punti = 100
+metadata/_custom_type_script = "uid://cf0yvoporl1gi"

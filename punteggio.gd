@@ -1,6 +1,6 @@
 extends Control
 
-
+@export var Punteggio : int
 func _process(delta):
-	var Testo = str(GlobaleAssoluta.Punteggio).pad_zeros(7)
+	var Testo = str(Punteggio).pad_zeros(7)
 	$Label.text = Testo

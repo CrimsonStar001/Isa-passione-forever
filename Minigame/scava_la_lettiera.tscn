@@ -19,6 +19,7 @@ anchor_mode = 0
 
 [node name="Punteggio" parent="." instance=ExtResource("2_llhq2")]
 visible = true
+Punteggio = 4
 
 [node name="Orologio" parent="." instance=ExtResource("4_q2v15")]
 
