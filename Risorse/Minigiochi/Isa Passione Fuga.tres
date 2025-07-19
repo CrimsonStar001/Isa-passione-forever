@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Mini_Giochi" load_steps=3 format=3 uid="uid://du4ro13k5eu4q"]
+
+[ext_resource type="Script" uid="uid://n7yishjs8hf4" path="res://Risorse/GiochiResours.gd" id="1_3dhx5"]
+[ext_resource type="Texture2D" uid="uid://dqcekbowr8oll" path="res://Sprite/Gioco 3.png" id="2_0mf5p"]
+
+[resource]
+script = ExtResource("1_3dhx5")
+texture = ExtResource("2_0mf5p")
+Scena = ""
+Nome = "Isa passione Fuga"
+metadata/_custom_type_script = "uid://n7yishjs8hf4"

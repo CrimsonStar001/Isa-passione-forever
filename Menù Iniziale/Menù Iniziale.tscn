@@ -1,9 +1,13 @@
-[gd_scene load_steps=16 format=3 uid="uid://qh3iro7ruafi"]
+[gd_scene load_steps=20 format=3 uid="uid://qh3iro7ruafi"]
 
-[ext_resource type="Texture2D" uid="uid://coxu5r6qqf062" path="res://Sprite/BackGround/Sfondo Start.png" id="1_s4kvq"]
-[ext_resource type="Texture2D" uid="uid://depjrr7ktq8uc" path="res://Sprite/Gioco 1.png" id="2_6i66r"]
-[ext_resource type="Texture2D" uid="uid://bs557ebdmlw2x" path="res://Sprite/Gioco 2.png" id="2_y41k7"]
-[ext_resource type="Script" uid="uid://b1stgf208e4we" path="res://giochi.gd" id="3_y41k7"]
+[ext_resource type="Script" uid="uid://bxf2shgch8gca" path="res://Menù Iniziale/menù_iniziale.gd" id="1_n2xfy"]
+[ext_resource type="Script" uid="uid://n7yishjs8hf4" path="res://Risorse/GiochiResours.gd" id="2_h3eed"]
+[ext_resource type="Texture2D" uid="uid://coxu5r6qqf062" path="res://Sprite/BackGround/Sfondo Start.png" id="2_x3366"]
+[ext_resource type="Resource" uid="uid://dkix4m12vrike" path="res://Risorse/Minigiochi/Isa_Passione_Pulizia.tres" id="3_ftrit"]
+[ext_resource type="Texture2D" uid="uid://bs557ebdmlw2x" path="res://Sprite/Gioco 2.png" id="3_h3eed"]
+[ext_resource type="Texture2D" uid="uid://depjrr7ktq8uc" path="res://Sprite/Gioco 1.png" id="4_ftrit"]
+[ext_resource type="Resource" uid="uid://ci1r2b4hm4y5v" path="res://Risorse/Minigiochi/Isa_Passione_Pusher.tres" id="4_yhp3i"]
+[ext_resource type="Resource" uid="uid://du4ro13k5eu4q" path="res://Risorse/Minigiochi/Isa Passione Fuga.tres" id="5_yhp3i"]
 
 [sub_resource type="Animation" id="Animation_475sb"]
 resource_name = "Destro_Andare"
@@ -321,6 +325,8 @@ _data = {
 }
 
 [node name="Start" type="Node2D"]
+script = ExtResource("1_n2xfy")
+images = Array[ExtResource("2_h3eed")]([ExtResource("3_ftrit"), ExtResource("4_yhp3i"), ExtResource("5_yhp3i")])
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
@@ -328,18 +334,17 @@ ignore_rotation = false
 
 [node name="SfondoStart" type="Sprite2D" parent="."]
 texture_repeat = 1
-texture = ExtResource("1_s4kvq")
+texture = ExtResource("2_x3366")
 centered = false
 
 [node name="GiocoSinistro" type="Sprite2D" parent="."]
 position = Vector2(320, 180)
-texture = ExtResource("2_y41k7")
+texture = ExtResource("3_h3eed")
 
 [node name="GiocoDestro" type="Sprite2D" parent="."]
 position = Vector2(540, 180)
 scale = Vector2(1.00136e-05, 1)
-texture = ExtResource("2_6i66r")
-script = ExtResource("3_y41k7")
+texture = ExtResource("4_ftrit")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -348,7 +353,7 @@ libraries = {
 
 [node name="Gioco attuale" type="Sprite2D" parent="."]
 position = Vector2(320, 180)
-texture = ExtResource("2_6i66r")
+texture = ExtResource("4_ftrit")
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
 libraries = {
@@ -356,4 +361,4 @@ libraries = {
 }
 movie_quit_on_finish = true
 
-[connection signal="animation_finished" from="AnimationPlayer" to="GiocoDestro" method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

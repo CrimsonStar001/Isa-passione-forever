@@ -11,15 +11,15 @@ config_version=5
 [application]
 
 config/name="Isa Passione Forever"
-run/main_scene="res://Menù Iniziale.tscn"
+run/main_scene="res://Menù Iniziale/Menù Iniziale.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon.svg"
 
 [autoload]
 
-"Menù"="*res://Global/Menù.tscn"
-GlobaleAssoluta="*res://Global/Globale_Assoluta.gd"
+"Menù"="*res://Minigame/Global/Menù.tscn"
+GlobaleAssoluta="*res://Minigame/Global/Globale_Assoluta.gd"
 
 [display]
 

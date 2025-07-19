@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Mini_Giochi" load_steps=3 format=3 uid="uid://ci1r2b4hm4y5v"]
+
+[ext_resource type="Script" uid="uid://n7yishjs8hf4" path="res://Risorse/GiochiResours.gd" id="1_7twtl"]
+[ext_resource type="Texture2D" uid="uid://bs557ebdmlw2x" path="res://Sprite/Gioco 2.png" id="2_dtodr"]
+
+[resource]
+script = ExtResource("1_7twtl")
+texture = ExtResource("2_dtodr")
+Scena = "\"\""
+Nome = "Isa Passione Pusher"
+metadata/_custom_type_script = "uid://n7yishjs8hf4"

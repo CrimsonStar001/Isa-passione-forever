@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Mini_Giochi" load_steps=3 format=3 uid="uid://dkix4m12vrike"]
+
+[ext_resource type="Script" uid="uid://n7yishjs8hf4" path="res://Risorse/GiochiResours.gd" id="1_e5dg2"]
+[ext_resource type="Texture2D" uid="uid://depjrr7ktq8uc" path="res://Sprite/Gioco 1.png" id="2_sbc3g"]
+
+[resource]
+script = ExtResource("1_e5dg2")
+texture = ExtResource("2_sbc3g")
+Scena = "res://Menù Iniziale/isa_passione_pulizie_menù.tscn"
+Nome = "Isa Passione Pulizie"
+metadata/_custom_type_script = "uid://n7yishjs8hf4"

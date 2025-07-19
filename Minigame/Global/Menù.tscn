@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://skth4d38xwk5"]
 
-[ext_resource type="Script" uid="uid://c73edakn7t0pv" path="res://Global/menù.gd" id="1_h7r22"]
+[ext_resource type="Script" uid="uid://c73edakn7t0pv" path="res://Minigame/Global/menù.gd" id="1_h7r22"]
 [ext_resource type="Texture2D" uid="uid://dhar3uhk1261p" path="res://Sprite/BackGround/Grigiume.png" id="2_lvwq5"]
 
-[node name="Menù" type="Control"]
+[node name="Menù_Pausa" type="Control"]
 process_mode = 3
 top_level = true
 layout_mode = 3
