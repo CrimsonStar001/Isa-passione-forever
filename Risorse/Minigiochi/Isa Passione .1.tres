@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Mini_Giochi" load_steps=3 format=3 uid="uid://b7bvff5x0funh"]
+
+[ext_resource type="Script" uid="uid://n7yishjs8hf4" path="res://Risorse/GiochiResours.gd" id="1_8lqca"]
+[ext_resource type="Texture2D" uid="uid://puo62b6dhqu4" path="res://Sprite/Oggetti/Sfondo Orologio.png" id="2_tw7gg"]
+
+[resource]
+script = ExtResource("1_8lqca")
+texture = ExtResource("2_tw7gg")
+Scena = ""
+Nome = "Isa passione .1"
+metadata/_custom_type_script = "uid://n7yishjs8hf4"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://uaqi2qm15fhq"]
+[gd_scene load_steps=11 format=3 uid="uid://uaqi2qm15fhq"]
 
 [ext_resource type="Script" uid="uid://f1yvn07t0g1y" path="res://Oggetti/Oggetti Minori/Cacche/cacche.gd" id="1_aer1c"]
 [ext_resource type="Script" uid="uid://cf0yvoporl1gi" path="res://Risorse/Cacche.gd" id="2_nk534"]
@@ -41,26 +41,9 @@ tracks/0/keys = {
 "values": [Vector2(0, 0), Vector2(-7, 0), Vector2(7, 0), Vector2(0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_wv0u5"]
-resource_name = "Scuoti_Pesante"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1, 1.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(-5, 0), Vector2(5, 0), Vector2(0, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qy5vt"]
 _data = {
 &"RESET": SubResource("Animation_8uauk"),
-&"Scuoti_Pesante": SubResource("Animation_wv0u5"),
 &"Scuoti_leggero": SubResource("Animation_jub3u")
 }
 

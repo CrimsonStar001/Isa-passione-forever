@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5cxm1p7klm8l"]
+
+[ext_resource type="Script" uid="uid://dafes70ji55ap" path="res://Oggetti/split_mini.gd" id="1_b67lx"]
+[ext_resource type="Texture2D" uid="uid://ba2wvju0fipe5" path="res://Sprite/Oggetti/Back_Ground_Slite.png" id="1_tldib"]
+[ext_resource type="Texture2D" uid="uid://dx0raidkkaauo" path="res://Sprite/Oggetti/Freccetta_Paletta.png" id="2_b67lx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b67lx"]
+size = Vector2(639, 361)
+
+[node name="Split_mini" type="Node2D"]
+z_index = 2
+script = ExtResource("1_b67lx")
+difficolta = 1
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(319.5, 180.5)
+shape = SubResource("RectangleShape2D_b67lx")
+
+[node name="Zona che si deve muove" type="Node2D" parent="."]
+
+[node name="Back_Ground" type="Sprite2D" parent="Zona che si deve muove"]
+z_index = -2
+texture = ExtResource("1_tldib")
+centered = false
+
+[node name="FreccettaPaletta" type="Sprite2D" parent="Zona che si deve muove"]
+z_index = 2
+texture = ExtResource("2_b67lx")
+
+[node name="Zona Rossa" type="ColorRect" parent="Zona che si deve muove"]
+offset_left = 3.0
+offset_top = 7.0
+offset_right = 97.0
+offset_bottom = 41.0
+color = Color(1, 0, 0, 1)
+
+[node name="Zona Verde" type="ColorRect" parent="Zona che si deve muove"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 1, 0, 1)

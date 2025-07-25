@@ -13,4 +13,7 @@ func _on_mouse_exited():
 func _on_mouse_entered():
 	hovered = true
 	EnterManiglia = true
+	
 	print("Mouse sopra!")
+
+	

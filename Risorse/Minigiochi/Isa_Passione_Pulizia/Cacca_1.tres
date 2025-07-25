@@ -7,4 +7,5 @@
 script = ExtResource("1_hsf4g")
 texture = ExtResource("2_d5kib")
 punti = 10
+"Probabilità" = 5
 metadata/_custom_type_script = "uid://cf0yvoporl1gi"
